@@ -1,0 +1,122 @@
+﻿@import '_sassVar.scss';
+
+%shoe-button-defaults {
+    display: inline-block;
+    zoom: 1;
+    line-height: normal;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+//remove focus border in firefox
+.shoe-button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+.shoe-button-group {
+    letter-spacing: -0.31em;
+    *letter-spacing: normal;
+    *word-spacing: -0.43em;
+    text-rendering: optimizespeed;
+}
+
+//opera specific spacing fix
+.opera-only :-o-prefocus,
+.shoe-button-group {
+    word-spacing: -0.43em;
+}
+
+.shoe-button-group {
+    @extend %shoe-button-defaults;
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align: top;
+    text-rendering: auto;
+    margin: 0;
+    border-radius: 0;
+    border-right: 1px solid $button-border-colour-default;
+}
+
+.shoe-button {
+    @extend %shoe-button-defaults;
+    font-family: inherit;
+    font-size: 100%;
+    padding: 0.5em 1em;
+    color: $button-colour-default;
+    border: 1px solid $button-border-colour-default;
+    background-color: $button-background-colour-default;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+.shoe-button-hover,
+.shoe-button:hover,
+.shoe-button:focus {
+    // csslint ignore:start
+    filter: alpha(opacity=90);
+    // csslint ignore:end
+    background-image: -webkit-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+    background-image: linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+}
+
+.shoe-button:focus {
+    outline: 0;
+}
+
+.shoe-button-active,
+.shoe-button:active {
+    box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
+    border-color: $button-border-colour-default;
+}
+
+.shoe-button[disabled],
+.shoe-button-disabled,
+.shoe-button-disabled:hover,
+.shoe-button-disabled:focus,
+.shoe-button-disabled:active {
+    border: none;
+    background-image: none;
+    // csslint ignore:start
+    filter: alpha(opacity=40);
+    // csslint ignore:end
+    opacity: 0.40;
+    cursor: not-allowed;
+    box-shadow: none;
+    pointer-events: none;
+}
+
+.shoe-button-hidden {
+    display: none;
+}
+
+//custom button styles
+//primary button
+.shoe-button-primary,
+.shoe-button-selected,
+a.shoe-button-primary,
+a.shoe-button-selected {
+    background-color: $button-background-colour-primary;
+    color: $button-colour-primary;
+}
+
+//end custom button styles
+
+.shoe-button-group .shoe-button:first-child {
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.shoe-button-group .shoe-button:last-child {
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-right: none;
+}

@@ -1,0 +1,250 @@
+﻿@import '_sassVar.scss';
+
+//set base font & prevent size adjustments after orientation change
+html {
+    font-family: $primary-font;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+//remove default margin
+body {
+    margin: 0;
+}
+
+//correct block displays not defined in older versions of IE & firefox for certain elements
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+//fix inline-block display issues in old versions of IE
+audio,
+canvas,
+progress,
+video {
+    display: inline-block; /* 1 */
+    vertical-align: baseline; /* 2 */
+}
+
+//prevent browsers from showing minimal audio controls
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+//fix the hidden tag / set it for older IE versions
+[hidden],
+template {
+    display: none;
+}
+
+//remove gray background for active links
+a {
+    background-color: transparent;
+}
+
+//improve readability on focused link elements
+a:active,
+a:hover {
+    outline: 0;
+}
+
+//address styling issues in older browsers
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+dfn {
+    font-style: italic;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+mark {
+    background: $mark-background-colour-default;
+    color: $mark-colour-default;
+}
+
+small {
+    font-size: 80%;
+}
+
+//prevent sup & sub from affecting line height
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+//remove link border
+img {
+    border: 0;
+}
+
+//correct overflow in older versions of IE
+svg:not(:root) {
+    overflow: hidden;
+}
+
+figure {
+    margin: 1em 40px;
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+}
+
+pre {
+    overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+
+//correct colour not being inherited,
+//properties not being inherited and margins set differently in different browsers
+button,
+input,
+optgroup,
+select,
+textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+//fix hidden overflow for IE
+button {
+    overflow: visible;
+}
+
+//correct transform issues in firefox/chrome
+button,
+select {
+    text-transform: none;
+}
+
+//avoid mobile formatting issues
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+    cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+input {
+    line-height: normal;
+}
+
+//fix styling issues in firefox/IE
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    box-sizing: content-box; /* 2 */
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+fieldset {
+    border: 1px solid $border-colour;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+    border: 0;
+    padding: 0;
+}
+
+textarea {
+    overflow: auto;
+}
+
+optgroup {
+    font-weight: bold;
+}
+
+//remove spacing between tables
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td,
+th {
+    padding: 0;
+}
+
+//hide hidden elements regardless of element tag
+.hidden,
+[hidden] {
+    display: none !important;
+}
+
+//maintain image aspect ratio within wrapper
+.shoe-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}

@@ -1,0 +1,63 @@
+﻿//general colours
+$primary-colour: #6FFFE9;
+$secondary-colour: #5BC0BE;
+$menu-colour: #0B132B;
+$menu-hover-colour: #3A506B;
+$menu-visited-colour: #1C2541;
+$primary-content-background-colour: #0B132B;
+$secondary-content-background-colour: #1C2541;
+$border-colour: #0B132B;
+
+//mark colour
+$mark-colour-default: #FFFFFF;
+$mark-background-colour-default: #FFFFFF;
+
+//button colours
+$button-colour-default: #0B132B;
+$button-border-colour-default: #0B132B;
+$button-background-colour-default: #E6E6E6;
+
+//specified button colour themes
+//primary / selected
+$button-colour-primary: #6FFFE9;
+$button-background-colour-primary: #5BC0BE;
+
+//form colours
+$form-border-colour-default: #0B132B;
+$form-background-colour-default: #3A506B;
+$form-shadow-colour-default: #FFFFFF;
+$form-focus-colour-default: #FFFFFF;
+$form-focusoutline-colour-default: #FFFFFF;
+
+//form input colours
+$form-input-border-colour-default: #FFFFFF;
+$form-input-background-colour-default: #FFFFFF;
+$form-input-text-colour-default: #FFFFFF;
+$form-input-invalid-colour-default: #FFFFFF;
+$form-input-invalid-border-colour-default: #FFFFFF;
+
+//form select colours
+$form-select-background-default: #FFFFFF;
+
+//disabled form colours
+$form-disabled-colour-default: #FFFFFF;
+$form-disabled-background-colour-default: #FFFFFF;
+
+//form message colours
+$form-message-colour-default: #FFFFFF;
+
+//fonts / fonstacks
+$default-font: sans-serif;
+$code-font: monospace, monospace;
+
+$primary-font: Arial, sans-serif;
+$secondary-font: Helvetica;
+$content-font: Helvetica;
+
+//platform specific fonts
+$android-font-default: "Droid Sans";
+$linux-font-default: FreeSans;
+$chromeos-font-default: Arimo;
+
+//content variables
+$content-dropdown-default: /*"\25B8"*/ "";

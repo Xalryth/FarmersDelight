@@ -1,0 +1,373 @@
+﻿@import '_sassVar.scss';
+
+.shoe-form input[type="text"],
+.shoe-form input[type="password"],
+.shoe-form input[type="email"],
+.shoe-form input[type="url"],
+.shoe-form input[type="date"],
+.shoe-form input[type="month"],
+.shoe-form input[type="time"],
+.shoe-form input[type="datetime"],
+.shoe-form input[type="datetime-local"],
+.shoe-form input[type="week"],
+.shoe-form input[type="number"],
+.shoe-form input[type="search"],
+.shoe-form input[type="tel"],
+.shoe-form input[type="color"],
+.shoe-form select,
+.shoe-form textarea {
+    padding: 0.5em 0.6em;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 4px;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+
+.shoe-form input:not([type]) {
+    padding: 0.5em 0.6em;
+    display: inline-block;
+    border: 1px solid $form-border-colour-default;
+    box-shadow: inset 0 1px 3px $form-shadow-colour-default;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.shoe-form input[type="color"] {
+    padding: 0.2em 0.5em;
+}
+
+
+.shoe-form input[type="text"]:focus,
+.shoe-form input[type="password"]:focus,
+.shoe-form input[type="email"]:focus,
+.shoe-form input[type="url"]:focus,
+.shoe-form input[type="date"]:focus,
+.shoe-form input[type="month"]:focus,
+.shoe-form input[type="time"]:focus,
+.shoe-form input[type="datetime"]:focus,
+.shoe-form input[type="datetime-local"]:focus,
+.shoe-form input[type="week"]:focus,
+.shoe-form input[type="number"]:focus,
+.shoe-form input[type="search"]:focus,
+.shoe-form input[type="tel"]:focus,
+.shoe-form input[type="color"]:focus,
+.shoe-form select:focus,
+.shoe-form textarea:focus {
+    outline: 0;
+    border-color: $form-focus-colour-default;
+}
+
+.shoe-form input:not([type]):focus {
+    outline: 0;
+    border-color: $form-focus-colour-default;
+}
+
+.shoe-form input[type="file"]:focus,
+.shoe-form input[type="radio"]:focus,
+.shoe-form input[type="checkbox"]:focus {
+    outline: thin solid $form-focusoutline-colour-default;
+    outline: 1px auto $form-focusoutline-colour-default;
+}
+
+.shoe-form .shoe-checkbox,
+.shoe-form .shoe-radio {
+    margin: 0.5em 0;
+    display: block;
+}
+
+.shoe-form input[type="text"][disabled],
+.shoe-form input[type="password"][disabled],
+.shoe-form input[type="email"][disabled],
+.shoe-form input[type="url"][disabled],
+.shoe-form input[type="date"][disabled],
+.shoe-form input[type="month"][disabled],
+.shoe-form input[type="time"][disabled],
+.shoe-form input[type="datetime"][disabled],
+.shoe-form input[type="datetime-local"][disabled],
+.shoe-form input[type="week"][disabled],
+.shoe-form input[type="number"][disabled],
+.shoe-form input[type="search"][disabled],
+.shoe-form input[type="tel"][disabled],
+.shoe-form input[type="color"][disabled],
+.shoe-form select[disabled],
+.shoe-form textarea[disabled] {
+    cursor: not-allowed;
+    background-color: $form-disabled-background-colour-default;
+    color: $form-disabled-colour-default;
+}
+
+.shoe-form input:not([type])[disabled] {
+    cursor: not-allowed;
+    background-color: $form-disabled-background-colour-default;
+    color: $form-disabled-colour-default;
+}
+
+.shoe-form input[readonly],
+.shoe-form select[readonly],
+.shoe-form textarea[readonly] {
+    background-color: $form-input-background-colour-default;
+    color: $form-input-text-colour-default;
+    border-color: $form-input-border-colour-default;
+}
+
+.shoe-form input:focus:invalid,
+.shoe-form textarea:focus:invalid,
+.shoe-form select:focus:invalid {
+    color: $form-input-invalid-colour-default;
+    border-color: $form-input-invalid-border-colour-default;
+}
+
+.shoe-form input[type="file"]:focus:invalid:focus,
+.shoe-form input[type="radio"]:focus:invalid:focus,
+.shoe-form input[type="checkbox"]:focus:invalid:focus {
+    outline-color: $form-input-invalid-border-colour-default;
+}
+
+.shoe-form select {
+    height: 2.25em;
+    border: 1px solid $form-border-colour-default;
+    background-color: $form-select-background-default;
+}
+
+.shoe-form select[multiple] {
+    height: auto;
+}
+
+.shoe-form label {
+    margin: 0.5em 0 0.2em;
+}
+
+.shoe-form fieldset {
+    margin: 0;
+    padding: 0.35em 0 0.75em;
+    border: 0;
+}
+
+.shoe-form legend {
+    display: block;
+    width: 100%;
+    padding: 0.3em 0;
+    margin-bottom: 0.3em;
+    color: $form-input-background-colour-default;
+    border-bottom: 1px solid $form-input-background-colour-default;
+}
+
+.shoe-form-stacked input[type="text"],
+.shoe-form-stacked input[type="password"],
+.shoe-form-stacked input[type="email"],
+.shoe-form-stacked input[type="url"],
+.shoe-form-stacked input[type="date"],
+.shoe-form-stacked input[type="month"],
+.shoe-form-stacked input[type="time"],
+.shoe-form-stacked input[type="datetime"],
+.shoe-form-stacked input[type="datetime-local"],
+.shoe-form-stacked input[type="week"],
+.shoe-form-stacked input[type="number"],
+.shoe-form-stacked input[type="search"],
+.shoe-form-stacked input[type="tel"],
+.shoe-form-stacked input[type="color"],
+.shoe-form-stacked input[type="file"],
+.shoe-form-stacked select,
+.shoe-form-stacked label,
+.shoe-form-stacked textarea {
+    display: block;
+    margin: 0.25em 0;
+}
+
+.shoe-form-stacked input:not([type]) {
+    display: block;
+    margin: 0.25em 0;
+}
+
+.shoe-form-aligned input,
+.shoe-form-aligned textarea,
+.shoe-form-aligned select,
+// NOTE: shoe-help-inline is deprecated. Use .shoe-form-message-inline instead.
+.shoe-form-aligned .shoe-help-inline,
+.shoe-form-message-inline {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    vertical-align: middle;
+}
+
+.shoe-form-aligned textarea {
+    vertical-align: top;
+}
+
+/* Aligned Forms */
+.shoe-form-aligned .shoe-control-group {
+    margin-bottom: 0.5em;
+}
+
+.shoe-form-aligned .shoe-control-group label {
+    text-align: right;
+    display: inline-block;
+    vertical-align: middle;
+    width: 10em;
+    margin: 0 1em 0 0;
+}
+
+.shoe-form-aligned .shoe-controls {
+    margin: 1.5em 0 0 11em;
+}
+
+/* Rounded Inputs */
+.shoe-form input.shoe-input-rounded,
+.shoe-form .shoe-input-rounded {
+    border-radius: 2em;
+    padding: 0.5em 1em;
+}
+
+/* Grouped Inputs */
+.shoe-form .shoe-group fieldset {
+    margin-bottom: 10px;
+}
+
+.shoe-form .shoe-group input,
+.shoe-form .shoe-group textarea {
+    display: block;
+    padding: 10px;
+    margin: 0 0 -1px;
+    border-radius: 0;
+    position: relative;
+    top: -1px;
+}
+
+.shoe-form .shoe-group input:focus,
+.shoe-form .shoe-group textarea:focus {
+    z-index: 3;
+}
+
+.shoe-form .shoe-group input:first-child,
+.shoe-form .shoe-group textarea:first-child {
+    top: 1px;
+    border-radius: 4px 4px 0 0;
+    margin: 0;
+}
+
+.shoe-form .shoe-group input:first-child:last-child,
+.shoe-form .shoe-group textarea:first-child:last-child {
+    top: 1px;
+    border-radius: 4px;
+    margin: 0;
+}
+
+.shoe-form .shoe-group input:last-child,
+.shoe-form .shoe-group textarea:last-child {
+    top: -2px;
+    border-radius: 0 0 4px 4px;
+    margin: 0;
+}
+
+.shoe-form .shoe-group button {
+    margin: 0.35em 0;
+}
+
+.shoe-form .shoe-input-1 {
+    width: 100%;
+}
+
+.shoe-form .shoe-input-3-4 {
+    width: 75%;
+}
+
+.shoe-form .shoe-input-2-3 {
+    width: 66%;
+}
+
+.shoe-form .shoe-input-1-2 {
+    width: 50%;
+}
+
+.shoe-form .shoe-input-1-3 {
+    width: 33%;
+}
+
+.shoe-form .shoe-input-1-4 {
+    width: 25%;
+}
+
+/* Inline help for forms */
+/* NOTE: shoe-help-inline is deprecated. Use .shoe-form-message-inline instead. */
+.shoe-form .shoe-help-inline,
+.shoe-form-message-inline {
+    display: inline-block;
+    padding-left: 0.3em;
+    color: $form-message-colour-default;
+    vertical-align: middle;
+    font-size: 0.875em;
+}
+
+/* Block help for forms */
+.shoe-form-message {
+    display: block;
+    color: $form-message-colour-default;
+    font-size: 0.875em;
+}
+
+@media only screen and (max-width : 480px) {
+    .shoe-form button[type="submit"] {
+        margin: 0.7em 0 0;
+    }
+
+    .shoe-form input:not([type]),
+    .shoe-form input[type="text"],
+    .shoe-form input[type="password"],
+    .shoe-form input[type="email"],
+    .shoe-form input[type="url"],
+    .shoe-form input[type="date"],
+    .shoe-form input[type="month"],
+    .shoe-form input[type="time"],
+    .shoe-form input[type="datetime"],
+    .shoe-form input[type="datetime-local"],
+    .shoe-form input[type="week"],
+    .shoe-form input[type="number"],
+    .shoe-form input[type="search"],
+    .shoe-form input[type="tel"],
+    .shoe-form input[type="color"],
+    .shoe-form label {
+        margin-bottom: 0.3em;
+        display: block;
+    }
+
+    .shoe-group input:not([type]),
+    .shoe-group input[type="text"],
+    .shoe-group input[type="password"],
+    .shoe-group input[type="email"],
+    .shoe-group input[type="url"],
+    .shoe-group input[type="date"],
+    .shoe-group input[type="month"],
+    .shoe-group input[type="time"],
+    .shoe-group input[type="datetime"],
+    .shoe-group input[type="datetime-local"],
+    .shoe-group input[type="week"],
+    .shoe-group input[type="number"],
+    .shoe-group input[type="search"],
+    .shoe-group input[type="tel"],
+    .shoe-group input[type="color"] {
+        margin-bottom: 0;
+    }
+
+    .shoe-form-aligned .shoe-control-group label {
+        margin-bottom: 0.3em;
+        text-align: left;
+        display: block;
+        width: 100%;
+    }
+
+    .shoe-form-aligned .shoe-controls {
+        margin: 1.5em 0 0 0;
+    }
+
+    // NOTE: shoe-help-inline is deprecated. Use .shoe-form-message-inline instead.
+    .shoe-form .shoe-help-inline,
+    .shoe-form-message-inline,
+    .shoe-form-message {
+        display: block;
+        font-size: 0.75em;
+        padding: 0.2em 0 0.8em;
+    }
+}

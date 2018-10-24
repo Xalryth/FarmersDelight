@@ -10,7 +10,19 @@ namespace FarmersDelight.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Title = "Home Page";
+            ViewBag.Title = "Hjemme";
+
+            return View();
+        }
+
+        public ActionResult ControlPanel() {
+            ViewBag.Title = "Kontrol Panel";
+
+            return View();
+        }
+
+        public ActionResult Statistics() {
+            ViewBag.Title = "Statistikker";
 
             return View();
         }

@@ -1,0 +1,94 @@
+﻿//sass variables
+@import '_sassVar.scss';
+
+//base css (html & base elements)
+@import '_base.scss';
+
+//base custom css (html & base elements)
+@import '_base-context.scss';
+
+//button presets
+@import '_buttons.scss';
+
+//form presets
+@import '_forms.scss';
+
+//grid presets
+@import '_grids.scss';
+
+//menu presets
+@import '_menus.scss';
+
+.shoe-backdrop {
+    background-color: $primary-content-background-colour;
+    font-family: $primary-font;
+}
+
+.shoe-menu-item > a > img {
+    width: 1rem;
+    height: 1rem;
+}
+
+.shoe-social-shill {
+    font-family: $primary-font;
+}
+
+.shoe-social-shill > a {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.125rem;
+    padding-bottom: 0.125rem;
+    margin-right: 15rem;
+    margin-left: 1rem;
+    display: block
+}
+
+.shoe-social-shill > a > div {
+    padding: 0.5rem;
+    padding-left: 0;
+    display: block;
+}
+
+.shoe-footer {
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+.shoe-social-link {
+    padding: 5rem;
+    display: block;
+    color: $secondary-colour;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.shoe-social-link > div > p {
+    display: inline-block;
+    font-size: 75%;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.shoe-social-link > div > img {
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: middle;
+    padding-right: 0.25rem;
+}
+
+.shoe-social-link:hover {
+    color: $primary-colour;
+    background-color: $menu-hover-colour;
+}
+
+.shoe-copyright {
+    vertical-align: middle;
+    align-content: center;
+    display: inline-block;
+    text-align: center;
+}
+
+.shoe-copyright > p {
+    font-family: $primary-font;
+    color: $secondary-colour;
+}

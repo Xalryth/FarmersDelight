@@ -209,11 +209,11 @@
     <Content Include="Content\Pure\pure-nr.css" />
     <Content Include="Content\Pure\pure.css" />
     <Content Include="Content\Pure\tables.css" />
+    <Content Include="Content\shoe.css" />
+    <Content Include="Content\shoe.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
     <Content Include="Areas\HelpPage\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\ResourceModel.cshtml" />
@@ -236,6 +236,14 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\shoe.scss" />
+    <Content Include="Content\_base-context.scss" />
+    <Content Include="Content\_base.scss" />
+    <Content Include="Content\_buttons.scss" />
+    <Content Include="Content\_forms.scss" />
+    <Content Include="Content\_grids.scss" />
+    <Content Include="Content\_menus.scss" />
+    <Content Include="Content\_sassVar.scss" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -255,6 +263,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_NavBar.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
