@@ -1,4 +1,6 @@
-﻿using System.Globalization;
+﻿using System;
+using System.DirectoryServices;
+using System.Globalization;
 using System.IO;
 using System.Threading;
 using System.Web;
@@ -8,6 +10,9 @@ namespace FarmersDelight.Controllers
 {
     public class HomeController : Controller
     {
+        string adPath = "LDAP://url.com";
+        string domainName = "url";
+
         public ActionResult Index()
         {
             ViewBag.Title = $"{Resources.Global.Menu_AppName.ToString()} > {Resources.Global.Menu_Home.ToString()}";
@@ -15,7 +20,7 @@ namespace FarmersDelight.Controllers
             return View();
         }
 
-        public ActionResult Statistics()
+        public ActionResult Statistics(string buildingName, int? filterType)
         {
             ViewBag.Title = $"{Resources.Global.Menu_AppName.ToString()} > {Resources.Global.Menu_Statistics.ToString()}"; ;
 
@@ -67,6 +72,56 @@ namespace FarmersDelight.Controllers
             }
 
             return Path.Combine("/Resources/Images/svg/countries", imageStr + ".svg");
+        }
+
+        public bool AuthenticateUser(string username, string passwordHash)
+        {
+            username = username.Split('@')[0];
+            string domainAndUsername = domainName + @"\" + username;
+
+            DirectoryEntry entry =
+                new DirectoryEntry(
+                    adPath,
+                    domainAndUsername,
+                    passwordHash);
+            try
+            {
+                object obj = entry.NativeObject;
+
+                DirectorySearcher search = new DirectorySearcher(entry);
+
+                search.Filter = "(SAMAccountName=" + username + ")";
+                search.PropertiesToLoad.AddRange(
+                    new string[] {
+                    "SAMAccountName",
+                    "cn",
+                    "userAccountControl"
+                    });
+
+                SearchResult result = search.FindOne();
+
+                if (result == null)
+                {
+                    return false;
+                }
+                else {
+                    Session["ADUserID"] = string.Empty;
+                    Session["ADUserName"] = string.Empty;
+                    Session["ADUserAccountControl"] = string.Empty;
+
+                    Session["ADUserID"] = result.Properties["SAMAccountName"][0];
+                    Session["ADUserName"] = result.Properties["cn"][0];
+                    Session["ADUserAccountControl"] = Convert.ToString(result.Properties["userAccountControl"]);
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+
+                throw;
+            }
+
+            return true;
         }
     }
 }
