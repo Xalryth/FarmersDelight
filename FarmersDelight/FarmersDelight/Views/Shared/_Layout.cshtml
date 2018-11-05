@@ -12,9 +12,10 @@
     <div>
         @RenderBody()
     </div>
+    @Html.Partial("_Footer")
+
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>
-@Html.Partial("_Footer")
 </html>

@@ -1,6 +1,27 @@
 ﻿<div class="shoe-menu shoe-menu-horizontal shoe-backdrop">
-    @Html.ActionLink("Hjem", "Index", "Home", new { @class = "shoe-menu-heading shoe-menu-link"})
+    @Html.ActionLink(Resources.Global.Menu_AppName.ToString(), "Index", "Home", new { area = "" }, new { @class = "shoe-menu-heading shoe-menu-link" })
     <ul class="shoe-menu-list">
-        <li class="shoe-menu-item">@Html.ActionLink("Kontrol Panel", "ControlPanel", "Home", new { @class = "shoe-menu-link"})</li>
+        <li class="shoe-menu-item">@Html.ActionLink(Resources.Global.Menu_Statistics.ToString(), "Statistics", "Home", new { @class = "shoe-menu-link" })</li>
+        <li class="shoe-menu-item">@Html.ActionLink(Resources.Global.Menu_ControlPanel.ToString(), "ControlPanel", "Home", new { @class = "shoe-menu-link" })</li>
+        <li class="shoe-menu-item shoe-menu-has-children shoe-menu-allow-hover">
+            <a href="#" class="shoe-menu-link"><img src="@Html.Action("GetCurrentLanguageImage", "Home")" /></a>
+            <ul class="shoe-menu-children">
+                <li class="shoe-menu-item">
+                    <a href="@Url.Action("ChangeLanguage", "Home", new { languageNotation = "en-US" })" class="shoe-menu-link">
+                        <img src="~/Resources/Images/svg/countries/united-states-of-america.svg" />
+                    </a>
+                </li>
+                <li class="shoe-menu-item">
+                    <a href="@Url.Action("ChangeLanguage", "Home", new { languageNotation = "da-DK" })" class="shoe-menu-link">
+                        <img src="~/Resources/Images/svg/countries/denmark.svg" />
+                    </a>
+                </li>
+                <li class="shoe-menu-item">
+                    <a href="@Url.Action("ChangeLanguage", "Home", new { languageNotation = "de-DE" })" class="shoe-menu-link">
+                        <img src="~/Resources/Images/svg/countries/germany.svg" />
+                    </a>
+                </li>
+            </ul>
+        </li>
     </ul>
 </div>
