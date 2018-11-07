@@ -70,5 +70,9 @@ namespace FarmersDelight.Dal
                 .Property(b => b.TimeOfMeasurement)
                 .HasDefaultValueSql("getdate()");
         }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer(@"Data Source=10.108.146.4;Initial Catalog=FarmersDelight;Integrated Security=SSPI;Username=FD;Password=123Abc");
+        }
     }
 }

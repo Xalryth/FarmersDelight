@@ -14,7 +14,7 @@ namespace FarmersDelight
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
-                name: "Default",
+                name: "Statistics",
                 url: "{controller}/{action}/{buildingName}/{sensorName}",
                 defaults: new { controller = "Home", action = "Statistics", buildingName = UrlParameter.Optional, sensorName = UrlParameter.Optional }
 );
