@@ -126,6 +126,9 @@
   <data name="Menu_Home" xml:space="preserve">
     <value>Home</value>
   </data>
+  <data name="Menu_Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
   <data name="Menu_Statistics" xml:space="preserve">
     <value>Statistics</value>
   </data>

@@ -126,6 +126,9 @@
   <data name="Menu_Home" xml:space="preserve">
     <value>Hjem</value>
   </data>
+  <data name="Menu_Search" xml:space="preserve">
+    <value>Søg</value>
+  </data>
   <data name="Menu_Statistics" xml:space="preserve">
     <value>Statistikker</value>
   </data>
