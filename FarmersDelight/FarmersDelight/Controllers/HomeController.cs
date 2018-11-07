@@ -17,6 +17,10 @@ namespace FarmersDelight.Controllers
         {
             ViewBag.Title = $"{Resources.Global.Menu_AppName.ToString()} > {Resources.Global.Menu_Home.ToString()}";
 
+            if(Request.Cookies["language"].Value == null)
+            {
+                ChangeLanguage(null);
+            }
             return View();
         }
 
