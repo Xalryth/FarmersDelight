@@ -5,6 +5,7 @@ using System.IO;
 using System.Threading;
 using System.Web;
 using System.Web.Mvc;
+using FarmersDelight.Dal;
 
 namespace FarmersDelight.Controllers
 {
@@ -12,6 +13,7 @@ namespace FarmersDelight.Controllers
     {
         string adPath = "LDAP://url.com";
         string domainName = "url";
+        FarmContext context = new FarmContext();
 
         public ActionResult Index()
         {
@@ -28,7 +30,7 @@ namespace FarmersDelight.Controllers
         {
             ViewBag.Title = $"{Resources.Global.Menu_AppName.ToString()} > {Resources.Global.Menu_Statistics.ToString()}"; ;
 
-            return View();
+            return View(context.buildings);
         }
 
         public ActionResult ControlPanel()

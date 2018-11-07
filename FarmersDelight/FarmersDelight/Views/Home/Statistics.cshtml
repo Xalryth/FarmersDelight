@@ -1,5 +1,7 @@
 ﻿@using FarmersDelight.Classes.FarmBuilding;
 @using FarmersDelight.Classes.Sensors;
+@using FarmersDelight.Dal;
+@using System;
 
 <div class="shoe-u-1-5">
     <div>
@@ -13,8 +15,7 @@
     <div>
         <!--hierarchy-->
         <ol>
-            @using ()
-            @foreach (Building Building in buildinglist)//Change Building list
+            @foreach (Building Building in Model)
             {
                 //Here we will have buildings listed on the search menu
                 <li>
