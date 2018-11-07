@@ -24,7 +24,7 @@ namespace FarmersDelight.Controllers
             return View();
         }
 
-        public ActionResult Statistics(string buildingName, int? filterType)
+        public ActionResult Statistics(string buildingName, string sensorName, int? filterType)
         {
             ViewBag.Title = $"{Resources.Global.Menu_AppName.ToString()} > {Resources.Global.Menu_Statistics.ToString()}"; ;
 
